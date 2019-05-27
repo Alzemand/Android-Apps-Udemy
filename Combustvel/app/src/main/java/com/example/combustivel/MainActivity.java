@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         txtAlcool = findViewById(R.id.txtAlcool);
         txtGasolina = findViewById(R.id.txtGasolina);
+        txtResultado = findViewById(R.id.txtResultado);
     }
 
     public void calcular (View view){
@@ -39,17 +40,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public Boolean validador (String pAlcool, String pGasolina){
-
-        Boolean camposValidados = true;
-
-        if (pAlcool == null || pAlcool.equals("")){
-            camposValidados = false;
-        }else if (pGasolina == null || pGasolina.equals("")){
-            camposValidados = false;
-        }
-        return camposValidados;
-    }
 
     public void calcularMelhorPreco(String pAlcool, String pGasolina){
 
@@ -63,6 +53,18 @@ public class MainActivity extends AppCompatActivity {
             txtResultado.setText("Melhor usar Alcool");
         }
 
+    }
+
+    public Boolean validador (String pAlcool, String pGasolina){
+
+        Boolean camposValidados = true;
+
+        if (pAlcool == null || pAlcool.equals("")){
+            camposValidados = false;
+        }else if (pGasolina == null || pGasolina.equals("")){
+            camposValidados = false;
+        }
+        return camposValidados;
     }
 
 
